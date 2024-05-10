@@ -24,7 +24,6 @@ from AnonXMusic.utils.stream.autoclear import auto_clean
 from AnonXMusic.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
-    SUPPORT_CHAT,
     SOUNCLOUD_IMG_URL,
     STREAM_IMG_URL,
     TELEGRAM_AUDIO_URL,
@@ -160,7 +159,7 @@ async def del_back_playlist(client, CallbackQuery, _):
     elif command == "Skip" or command == "Replay":
         check = db.get(chat_id)
         if command == "Skip":
-            txt = f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"❖ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ ➥ {mention}"
             popped = None
             try:
                 popped = check.pop(0)
@@ -168,7 +167,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     await auto_clean(popped)
                 if not check:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"❖ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ ➥ {mention}"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -183,7 +182,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 try:
                     await CallbackQuery.edit_message_text(
-                        f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+                        f"❖ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ\n│ \n└ʙʏ ➥ {mention}"
                     )
                     await CallbackQuery.message.reply_text(
                         text=_["admin_6"].format(
@@ -195,7 +194,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     return
         else:
-            txt = f"➻ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ 🎄\n│ \n└ʙʏ : {mention} 🥀"
+            txt = f"❖ sᴛʀᴇᴀᴍ ʀᴇ-ᴘʟᴀʏᴇᴅ\n│ \n└ʙʏ ➥ {mention}"
         await CallbackQuery.answer()
         queued = check[0]["file"]
         title = (check[0]["title"]).title()
@@ -313,7 +312,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     if str(streamtype) == "audio"
                     else TELEGRAM_VIDEO_URL,
                     caption=_["stream_1"].format(
-                        SUPPORT_CHAT, title[:23], duration, user
+                        config.SUPPORT_CHAT, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
@@ -326,7 +325,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     if str(streamtype) == "audio"
                     else TELEGRAM_VIDEO_URL,
                     caption=_["stream_1"].format(
-                        SUPPORT_CHAT, title[:23], duration, user
+                        config.SUPPORT_CHAT, title[:23], duration, user
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
