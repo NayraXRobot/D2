@@ -55,9 +55,9 @@ def welcomepic(pic, user, chat, id, uname):
 
 
 HUHU = """**
-@app.on_message(filters.command("swel") & ~filters.private)
+@app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**❖ ᴜsᴀɢᴇ ➥** /swel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
+    usage = "**❖ ᴜsᴀɢᴇ ➥** /wel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -126,7 +126,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 ● ɴᴀᴍᴇ ➥  {user.mention}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ● ᴜsᴇʀ ɪᴅ ➥  {user.id}
-● ᴍᴀɴᴀɢᴇᴅ ʙʏ ➥ ɢʀᴇᴀᴛᴘᴇʀꜱᴏɴ (https://t.me/GREATPERSON_xd)
+● ᴍᴀɴᴀɢᴇᴅ ʙʏ ➥ [ɢʀᴇᴀᴛᴘᴇʀꜱᴏɴ](https://t.me/GREATPERSON_xd)
 ❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴢ ᴏ ʏ ᴜ ࿐
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
