@@ -110,5 +110,5 @@ async def on_left_chat_member(_, message: Message):
             [InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{app.username}?startgroup=true")]
          ]))
 
-#welcome
-
+#
+      
