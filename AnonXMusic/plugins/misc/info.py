@@ -11,7 +11,7 @@ from typing import Union, Optional
 
 EVAA = [
     [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/zoyumusicbot?startgroup=true"),
     ],
 ]
 
@@ -72,7 +72,7 @@ INFO_TEXT = """
 ● ᴜsᴇʀ sᴛᴀᴛᴜs ➥ {}
 ● ᴜsᴇʀ ᴅᴄ ɪᴅ ➥ {}
 
-❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐
+❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴢ ᴏ ʏ ᴜ ࿐
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """
 
@@ -98,7 +98,7 @@ async def userstatus(user_id):
 
 # --------------------------------------------------------------------------------- #
 
-@app.on_message(filters.command(["xinfo", "xinformation", "xuserinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
+@app.on_message(filters.command(["info", "information", "userinfo"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
 async def userinfo(_, message):
     chat_id = message.chat.id
     user_id = message.from_user.id
