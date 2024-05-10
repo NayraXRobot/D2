@@ -1,26 +1,7 @@
-from AnonXMusic.core.bot import Anony
-from AnonXMusic.core.dir import dirr
-from AnonXMusic.core.git import git
-from AnonXMusic.core.userbot import Userbot
-from AnonXMusic.misc import dbb, heroku
+from async_pymongo import AsyncClient
+from config import MONGO_DB_URI
 
-from .logging import LOGGER
+DBNAME = "CUTIEXMUSICBOTPT"
 
-dirr()
-git()
-dbb()
-heroku()
-
-app = Anony()
-userbot = Userbot()
-
-
-from .platforms import *
-
-Apple = AppleAPI()
-Carbon = CarbonAPI()
-SoundCloud = SoundAPI()
-Spotify = SpotifyAPI()
-Resso = RessoAPI()
-Telegram = TeleAPI()
-YouTube = YouTubeAPI()
+mongo = AsyncClient(MONGO_DB_URI)
+dbname = mongo[DBNAME]
