@@ -126,7 +126,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 ● ɴᴀᴍᴇ ➥  {user.mention}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ● ᴜsᴇʀ ɪᴅ ➥  {user.id}
-● ᴍᴀɴᴀɢᴇᴅ ʙʏ ➥ 
+● ᴍᴀɴᴀɢᴇᴅ ʙʏ ➥ ɢʀᴇᴀᴛᴘᴇʀꜱᴏɴ (https://t.me/GREATPERSON_xd)
 ❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴢ ᴏ ʏ ᴜ ࿐
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
