@@ -126,13 +126,13 @@ async def greet_group(_, member: ChatMemberUpdated):
 ● ɴᴀᴍᴇ ➥  {user.mention}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ● ᴜsᴇʀ ɪᴅ ➥  {user.id}
-
-❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐
+● ᴍᴀɴᴀɢᴇᴅ ʙʏ ➥ 
+❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴢ ᴏ ʏ ᴜ ࿐
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
 reply_markup=InlineKeyboardMarkup(
 [
-[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxBot?startgroup=new"),
+[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/zoyumusicbot?startgroup=new"),
 ]
 ]
 ))
